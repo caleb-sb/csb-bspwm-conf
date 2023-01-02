@@ -1,7 +1,7 @@
 # Maintainer: Caleb Bredekamp
 pkgname=csb-bspwm-conf-git
 _pkgname=csb-bspwm-conf
-pkgver=v0.0.1.r1.g03dfc44
+pkgver=v0.0.1.r0.gf6a35be
 pkgrel=1
 _destname1="/etc/skel/.config/bspwm/"
 pkgdesc="Caleb's bspwm configuration"
@@ -10,7 +10,7 @@ url="https://github.com/caleb-sb/${_pkgname}.git"
 license=('MIT')
 depends=('bspwm')
 makedepends=('git')
-replaces=()
+replaces=('arcolinux-bspwm-git')
 provides=("${pkgname}")
 conflicts=()
 options=(!strip !emptydirs)
