@@ -50,7 +50,7 @@ numlockx on &
 picom --config $HOME/.config/picom/picom.conf &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
-run volumeicon &
+#run volumeicon &
 #nitrogen --restore &
 #run caffeine &
 #run vivaldi-stable &
