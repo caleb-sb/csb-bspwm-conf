@@ -8,6 +8,7 @@ function run {
 }
 
 count=$(xrandr --query | grep " connected" | wc -l)
+export defnetif=$(ip route | grep '^default' | awk '{print $5}' | head -n1)
 
 #Find out your monitor name with xrandr or arandr (save and you get this line)
 #xrandr --output VGA-1 --primary --mode 1360x768 --pos 0x0 --rotate normal
@@ -40,12 +41,12 @@ dex $HOME/.config/autostart/arcolinux-welcome-app.desktop
 xsetroot -cursor_name left_ptr &
 
 #conky -c $HOME/.config/bspwm/system-overview &
-run variety &
-run nm-applet &
-run pamac-tray &
 run xfce4-power-manager &
+#run variety &
+#run nm-applet &
+#run pamac-tray &
 numlockx on &
-blueberry-tray &
+#blueberry-tray &
 picom --config $HOME/.config/picom/picom.conf &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
