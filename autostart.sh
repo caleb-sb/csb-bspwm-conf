@@ -31,8 +31,7 @@ fi
 
 #Some ways to set your wallpaper besides variety or nitrogen
 #feh --bg-scale ~/.config/bspwm/wall.png &
-feh --bg-fill /home/caleb/.config/variety/Favorites/wallhaven-1pjlyw.jpg &
-feh --bg-fill /home/caleb/.config/variety/Favorites/wallhaven-1pjlyw.jpg &
+feh --bg-fill /home/caleb/.config/variety/Favorites/dragon.jpg &
 #wallpaper for other Arch based systems
 #feh --bg-fill /usr/share/archlinux-tweak-tool/data/wallpaper/wallpaper.png &
 #feh --randomize --bg-fill ~/Dropbox/Apps/Desktoppr/*

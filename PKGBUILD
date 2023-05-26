@@ -1,7 +1,7 @@
 # Maintainer: Caleb Bredekamp
 pkgname=csb-bspwm-conf-git
 _pkgname=csb-bspwm-conf
-pkgver=v0.0.1.r2.g0cb91bc
+pkgver=v0.0.1.r3.g9260d84
 pkgrel=1
 _destname1="/etc/skel/.config/bspwm/"
 pkgdesc="Caleb's bspwm configuration"

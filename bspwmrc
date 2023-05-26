@@ -39,8 +39,7 @@ EXTERNAL_MONITOR="HDMI-1"
 INTERNAL_MONITOR="eDP-1"
 if [[ "$1" = 0 ]]; then
 	if [[ $(xrandr --query | grep "${EXTERNAL_MONITOR} connected") ]]; then
-		bspc monitor "$EXTERNAL_MONITOR" -d 1 2 3 4 5 6 7
-		bspc monitor "$INTERNAL_MONITOR" -d 8 9 10
+		bspc monitor "$EXTERNAL_MONITOR" -d 1 2 3 4 5 6 7 8 9 10
 		bspc wm -O "$EXTERNAL_MONITOR" "$INTERNAL_MONITOR"
 	else
 		bspc monitor "$INTERNAL_MONITOR" -d 1 2 3 4 5 6 7 8 9 10
@@ -49,7 +48,7 @@ fi
 
 monitor_add() {
 	# Move the first seven workspaces to the external
-	for desktop in $(bspc query -D --names -m "$INTERNAL_MONITOR" | sed 7q); do
+	for desktop in $(bspc query -D --names -m "$INTERNAL_MONITOR" | sed 10q); do
 		 bspc desktop "$desktop" --to-monitor "$EXTERNAL_MONITOR"
 	done
 
@@ -81,7 +80,7 @@ monitor_remove() {
 if [[ $(xrandr -q | grep "${EXTERNAL_MONITOR} connected") ]]; then
   # set xrandr rules for docked setup
   xrandr --output "$INTERNAL_MONITOR" --mode 1920x1080 --pos 0x0 --rotate normal --output "$EXTERNAL_MONITOR" --primary --mode 1920x1080 --pos 1920x0 --rotate normal
-  if [[ $(bspc query -D -m "${EXTERNAL_MONITOR}" | wc -l) -ne 7 ]]; then
+  if [[ $(bspc query -D -m "${EXTERNAL_MONITOR}" | wc -l) -ne 10 ]]; then
     monitor_add
   fi
   bspc wm -O "$EXTERNAL_MONITOR" "$INTERNAL_MONITOR"
